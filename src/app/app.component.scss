@@ -1,0 +1,72 @@
+@keyframes mymove {
+  0%   {
+		top: -15px;
+		opacity: 0%;
+	}
+
+  100% {
+		top: 0px; 
+		opacity: 100%;
+	}
+}
+
+.header {
+	min-width: 300px;
+
+	.input-box-container {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.spacer {
+		margin: 16px;
+	}
+
+	.chastizing-text-container {
+		margin: 16px;
+		padding: 16px;
+		text-align: center;
+		color: #c34c4c;
+	}
+
+	.input-box {
+		font-family: inherit;
+		font-size: inherit;
+		padding: 8px;
+		text-align: center;
+		background-color: black;
+		color: rgb(218, 217, 221);
+		border: 1px solid rgb(104, 102, 103);
+		border-radius: 4px;
+		outline: none;
+
+		&:focus {
+			border: 1px solid rgb(180, 176, 177);
+		}
+	}
+
+	.result-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 250px);
+		grid-row-gap: 24px;
+		grid-column-gap: 24px;
+		justify-content: center;
+		width: 90%;
+		margin: 0 auto;
+		list-style: none;
+
+		.result-item {
+			padding: 12px;
+			border: 1px solid rgb(54, 53, 53);
+			border-radius: 6px;
+			text-align: center;
+			overflow-wrap: break-word;
+			background-color: black;
+			position: relative;
+		}
+
+		.run-animation {
+			animation: mymove 0.38s ease-in-out;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+
+
+
+
+
+
+<div>
+  <div class="header">
+    <div class="input-box-container">
+      <span>Number Rebaser</span>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="input-box-container">
+      <input class="input-box" (ngModelChange)="this.userInputUpdate.next($event)" [(ngModel)]="userInput">
+    </div>
+
+    <div class="spacer"></div>
+
+    <div *ngIf="displayChastizingText" class="input-box-container">
+      <div class="chastizing-text-container">
+        <span>Oops!  Your entry must be greater than -1 and less than 9,007,199,254,740,993.  Sorry that over 9 quadrillion numbers wasn't enough for you!</span>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="result-container">
+      <div *ngFor="let base of bases" class="result-item run-animation">
+        <span style="color: gray">{{ base.description }}:</span>
+        <br>
+        {{ base.value }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
